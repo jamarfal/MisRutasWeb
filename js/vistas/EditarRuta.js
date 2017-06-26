@@ -10,12 +10,15 @@ var EditarRuta = Backbone.View.extend({
     }, events: {
         'change #txtEditarTitulo': function () {
             this.model.set('titulo', this.$('#txtEditarTitulo').val());
+            this.model.save();
         },
         'change #txtEditarColor': function () {
             this.model.set('color', this.$('#txtEditarColor').val());
+            this.model.save();
         },
         'change #txtEditarVisualizar': function () {
             this.model.set('visible', this.$('#txtEditarVisualizar').val());
+            this.model.save();
         },
         'click #btBorrar': function () {
             this.collection.remove(this.model);

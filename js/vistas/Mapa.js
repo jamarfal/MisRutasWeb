@@ -51,7 +51,9 @@ var Mapa = Backbone.View.extend({
         this.polylines = [];
         // pintar las rutas
         var self = this;
+        console.info("Mapas", this.collection.size())
         this.collection.forEach(function (ruta) {
+            console.info("Mapas", ruta);
             // sólo si son visibles
             if (ruta.get('visible') == 'on') {
                 var polyline = new google.maps.Polyline({

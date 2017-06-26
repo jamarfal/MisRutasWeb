@@ -13,7 +13,17 @@ var ListaRutas = Backbone.View.extend({
         this.collection.on('change:titulo', function () {
             self.render();
         });
-        this.render();
+
+        this.collection.on('reset', function () {
+            self.render();
+        });
+
+        this.collection.on('all', function () {
+            self.render();
+        });
+
+
+        this.collection.fetch();
     },
     render: function () {
         // limpiar

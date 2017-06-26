@@ -38,6 +38,7 @@ var NuevaRuta = Backbone.View.extend({
         clearInterval(this.timerGps);
         // guardar ruta
         this.collection.add(this.model);
+        this.model.save();
         // limpiar modelo
         this.model = null;
         // pintar vista
