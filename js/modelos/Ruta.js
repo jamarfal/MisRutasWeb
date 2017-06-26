@@ -4,6 +4,8 @@
 /**
  * Clase que implementa rutas individuales
  */
+import {Collection, Model} from 'backbone';
+import {LocalStorage} from 'backbone.localstorage';
 var Ruta = Backbone.Model.extend({
     initialize: function () {
         if (!this.id) this.set('id', _.uniqueId());
