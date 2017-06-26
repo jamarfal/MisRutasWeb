@@ -32,6 +32,7 @@ var NuevaRuta = Backbone.View.extend({
     },
     pararRuta: function () {
         console.log('pararRuta(' + this.model.id + ')');
+        this.$('#txtTitulo').val("").textinput('refresh');
         this.grabando = false;
         // parar timers
         clearInterval(this.timerReloj);
